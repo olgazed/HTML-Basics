@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercise05</title>
+    
+    <style>
+
+    body {
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        font-family: Verdana, sans-serif;
+        font-size: 0.8em;
+    }
+
+    table {
+        width: 300px;
+        border-collapse: collapse;
+    }
+
+    table, 
+    tr, 
+    td {
+         border: 1px solid black;
+    }
+
+    table tr td:first-child {
+        width:35%;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .blue {
+            background-color: #CEF6F5;
+    }
+
+    .star {
+        color: red;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <form name="Registration" action="registration.php" method="POST">
+     <table align="center" cellpadding="5">
+        <tr>
+            <td>
+                <label for="lastname">Last Name<span class="star">*</span></label>
+            </td>
+            <td colspan="3">
+                <input type="text" required placeholder="Pupkin" name="lastname" size="50">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="firstname">First Name<span class="star">*</span></label>
+            </td>
+            <td colspan="3">
+                <input type="text" required placeholder="Vasili" name="firstname" size="50">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address">Address</label>
+            </td>
+            <td colspan="3">
+                <textarea name="address" cols="40" rows="4" placeholder="80 Rechitsky Avenue"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="city">City</label>
+            </td>
+            <td>
+                <input type="text" placeholder="Gomel" name="city" size="30">
+            </td>
+            <td>
+                <label for="state"><b>State</b></label>
+            </td>
+            <td>
+                <input type="text" name="state" size="5">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="zipcode">Zip/Postal Code</label>
+            </td>
+            <td colspan="3">
+                <input type="text" placeholder="246000" name="zipcode" size="8">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="country">Country</label>
+            </td>
+            <td colspan="3">
+                <select name="country" size="1">
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Belarus" selected>Belarus</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Estonia">Estonia</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="phonenumber">Phone (country code, area code, number)</label>
+            </td>
+            <td colspan="3">
+                <span>(+</span>
+                <input type="tel" placeholder="375" name="countrycode" size="5">
+                <span>)</span> 
+                <input type="tel" placeholder="29" name="areacode" size="5">
+                <span> - </span>
+                <input type="tel" placeholder="6749385" name="phonenumber" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">E-mail<span class="star">*</span></label>
+            </td>
+            <td colspan="3">
+                <input type="email" required placeholder="vpupkin@gmail.com" name="email" size="50">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="birthdate">Birth date</label>
+            </td>
+            <td colspan="3">
+                <span> Month </span>
+                <input type="text" placeholder="10" name="month" size="3">
+                <span> Day </span>
+                <input type="text" placeholder="17" name="day" size="3">
+                <span> Year (4 digit) </span>
+                <input type="text" placeholder="1982" name="year" size="6">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="gender">Gender</label>
+            </td>
+            <td colspan="3">
+                <select name="gender" size="1">
+                    <option value="male" selected>Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="startdate">Starting date</label>
+            </td>
+            <td colspan="3">
+                <input type="radio" checked name="startdate" value="spring">
+                <span>Spring 2015</span> 
+                <input type="radio" name="startdate" value="summer">
+                <span>Summer 2015</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="information">Comments/Questions</label>
+            </td>
+            <td colspan="3">
+                <textarea name="information" cols="40" rows="5" placeholder="Please, send me more information about the lodging."></textarea>
+            </td>
+        </tr>
+        <tr class="blue">
+            <td colspan="4">
+                <div class="box" align="center">
+                    <input type="submit" value="Submit"> 
+                    <input type="reset" value="Clear This Form">
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
